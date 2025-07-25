@@ -61,7 +61,40 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Extended glassmorphism colors
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				glass: {
+					overlay: 'hsl(var(--glass-overlay))',
+					border: 'hsl(var(--glass-border))'
+				},
+				neon: {
+					glow: 'hsl(var(--neon-glow))',
+					'glow-blue': 'hsl(var(--neon-glow-blue))'
 				}
+			},
+			backgroundImage: {
+				'gradient-glass': 'var(--gradient-glass)',
+				'gradient-neon': 'var(--gradient-neon)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'glass': 'var(--shadow-glass)',
+				'neon': 'var(--shadow-neon)',
+				'neon-blue': 'var(--shadow-neon-blue)'
+			},
+			backdropBlur: {
+				'glass': '16px'
+			},
+			transitionTimingFunction: {
+				'glass': 'var(--transition-glass)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
