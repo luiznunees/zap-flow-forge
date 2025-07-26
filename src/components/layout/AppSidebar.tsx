@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { 
+  Home as HomeIcon,
   Zap, 
   CreditCard, 
   Bell, 
@@ -23,8 +24,14 @@ import {
 
 const menuItems = [
   {
-    title: "Disparos",
+    title: "Início",
     url: "/",
+    icon: HomeIcon,
+    description: "Dashboard principal"
+  },
+  {
+    title: "Disparos",
+    url: "/disparos",
     icon: Zap,
     description: "Envie mensagens em massa"
   },

@@ -62,13 +62,13 @@ export default function Plano() {
   const usagePercentage = 62.5 // 1250/2000
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-4 sm:p-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold bg-gradient-neon bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-neon bg-clip-text text-transparent">
             Meu Plano
           </h1>
-          <p className="text-muted-foreground mt-1">
+          <p className="text-muted-foreground mt-1 text-sm sm:text-base">
             Gerencie sua assinatura e acompanhe o uso
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function Plano() {
 
       {/* Current Plan Status */}
       <GlassCard variant="blur" className="p-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Crown className="h-5 w-5 text-primary" />
@@ -140,7 +140,7 @@ export default function Plano() {
       <div className="space-y-4">
         <h2 className="text-2xl font-semibold">Comparação de Planos</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {plans.map((plan) => (
             <GlassCard 
               key={plan.name}
@@ -218,7 +218,7 @@ export default function Plano() {
             <h2 className="text-2xl font-semibold">Por que fazer upgrade?</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
             <div className="text-center space-y-2">
               <div className="w-12 h-12 bg-gradient-neon rounded-2xl flex items-center justify-center mx-auto">
                 <Sparkles className="h-6 w-6 text-primary-foreground" />

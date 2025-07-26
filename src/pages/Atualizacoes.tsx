@@ -94,13 +94,13 @@ const getTypeConfig = (type: string) => {
 
 export default function Atualizacoes() {
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="space-y-6 p-4 sm:p-6">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold bg-gradient-neon bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-neon bg-clip-text text-transparent">
             Atualizações
           </h1>
-          <p className="text-muted-foreground mt-1">
+          <p className="text-muted-foreground mt-1 text-sm sm:text-base">
             Acompanhe as novidades e melhorias da plataforma
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function Atualizacoes() {
 
       {/* Latest Update Highlight */}
       <GlassCard variant="blur" glow className="p-6 border-primary/30">
-        <div className="flex items-start gap-4">
+        <div className="flex flex-col sm:flex-row items-start gap-4">
           <div className="w-12 h-12 bg-gradient-neon rounded-2xl flex items-center justify-center flex-shrink-0">
             <Sparkles className="h-6 w-6 text-primary-foreground" />
           </div>

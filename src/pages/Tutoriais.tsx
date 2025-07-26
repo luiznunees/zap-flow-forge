@@ -91,13 +91,13 @@ const getDifficultyColor = (difficulty: string) => {
 
 export default function Tutoriais() {
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="space-y-6 p-4 sm:p-6">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold bg-gradient-neon bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-neon bg-clip-text text-transparent">
             Tutoriais
           </h1>
-          <p className="text-muted-foreground mt-1">
+          <p className="text-muted-foreground mt-1 text-sm sm:text-base">
             Aprenda a usar todos os recursos da plataforma
           </p>
         </div>
@@ -110,7 +110,7 @@ export default function Tutoriais() {
 
       {/* Featured Tutorial */}
       <GlassCard variant="blur" glow className="p-6 border-primary/30">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="relative group cursor-pointer">
             <div className="aspect-video bg-gradient-card rounded-2xl overflow-hidden">
               <img 
@@ -163,7 +163,7 @@ export default function Tutoriais() {
       {/* Categories */}
       <div className="space-y-4">
         <h2 className="text-xl font-semibold">Categorias</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {categories.map((category) => {
             const Icon = category.icon
             return (
@@ -187,7 +187,7 @@ export default function Tutoriais() {
       <div className="space-y-4">
         <h2 className="text-xl font-semibold">Todos os Tutoriais</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {tutorials.map((tutorial) => (
             <GlassCard key={tutorial.id} variant="blur" className="group cursor-pointer hover:shadow-glass transition-all overflow-hidden">
               <div className="relative">
@@ -252,7 +252,7 @@ export default function Tutoriais() {
           <p className="text-muted-foreground">
             Nossa equipe está sempre criando novos conteúdos. Sugira um tutorial ou entre em contato conosco!
           </p>
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button variant="outline">Sugerir Tutorial</Button>
             <Button variant="secondary">Entrar em Contato</Button>
           </div>

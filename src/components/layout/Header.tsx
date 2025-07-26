@@ -58,7 +58,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full">
       <GlassCard variant="blur" className="rounded-none border-b border-glass-border backdrop-blur-2xl bg-background/80">
-        <div className="flex h-16 items-center justify-between px-6">
+        <div className="flex h-16 items-center justify-between px-3 sm:px-6">
           <div className="flex items-center gap-4">
             <SidebarTrigger />
             <div className="flex items-center gap-3">
@@ -68,21 +68,21 @@ export function Header() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             {/* Plan Usage */}
-            <GlassCard variant="blur" className="px-4 py-2">
+            <GlassCard variant="blur" className="px-2 sm:px-4 py-2 hidden md:block">
               <div className="flex items-center gap-3">
                 <div className="text-sm">
                   <span className="font-medium text-foreground">
                     {planUsage.current.toLocaleString()}
                   </span>
-                  <span className="text-muted-foreground"> de </span>
-                  <span className="font-medium text-foreground">
+                  <span className="text-muted-foreground hidden lg:inline"> de </span>
+                  <span className="font-medium text-foreground hidden lg:inline">
                     {planUsage.limit.toLocaleString()}
                   </span>
-                  <span className="text-muted-foreground"> mensagens</span>
+                  <span className="text-muted-foreground hidden lg:inline"> mensagens</span>
                 </div>
-                <div className="w-24">
+                <div className="w-16 sm:w-24">
                   <Progress value={usagePercentage} className="h-2" />
                 </div>
               </div>
@@ -150,14 +150,14 @@ export function Header() {
             {/* User Menu */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="glass" className="gap-2">
-                  <Avatar className="h-8 w-8">
-                    <AvatarFallback className="bg-primary text-primary-foreground">
+                <Button variant="glass" className="gap-1 sm:gap-2">
+                  <Avatar className="h-6 w-6 sm:h-8 sm:w-8">
+                    <AvatarFallback className="bg-primary text-primary-foreground text-xs sm:text-sm">
                       LU
                     </AvatarFallback>
                   </Avatar>
-                  <span className="font-medium">Olá, Luis</span>
-                  <ChevronDown className="h-4 w-4" />
+                  <span className="font-medium text-sm hidden sm:inline">Olá, Luis</span>
+                  <ChevronDown className="h-4 w-4 hidden sm:inline" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">

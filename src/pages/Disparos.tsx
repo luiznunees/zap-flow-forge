@@ -66,13 +66,13 @@ export default function Disparos() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-4 sm:p-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold bg-gradient-neon bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-neon bg-clip-text text-transparent">
             Disparos
           </h1>
-          <p className="text-muted-foreground mt-1">
+          <p className="text-muted-foreground mt-1 text-sm sm:text-base">
             Envie mensagens em massa de forma inteligente
           </p>
         </div>
@@ -98,7 +98,7 @@ export default function Disparos() {
                 <h2 className="text-xl font-semibold">Novo Disparo Imediato</h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div>
                     <Label htmlFor="campaign-name">Nome da Campanha</Label>
@@ -222,7 +222,7 @@ export default function Disparos() {
                 <h2 className="text-xl font-semibold">Agendar Novo Disparo</h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div>
                     <Label htmlFor="scheduled-campaign-name">Nome da Campanha</Label>
@@ -312,18 +312,18 @@ export default function Disparos() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold">Histórico de Campanhas</h2>
-            <div className="flex items-center gap-2">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input 
-                  placeholder="Buscar campanhas..." 
-                  className="pl-9 w-64 bg-card/50 backdrop-blur-sm"
-                />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                <div className="relative w-full sm:w-64">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                  <Input 
+                    placeholder="Buscar campanhas..." 
+                    className="pl-9 bg-card/50 backdrop-blur-sm"
+                  />
+                </div>
+                <Button variant="outline" size="icon" className="self-end sm:self-auto">
+                  <Filter className="h-4 w-4" />
+                </Button>
               </div>
-              <Button variant="outline" size="icon">
-                <Filter className="h-4 w-4" />
-              </Button>
-            </div>
           </div>
 
           <div className="space-y-3">
