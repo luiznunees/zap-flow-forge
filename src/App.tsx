@@ -9,6 +9,7 @@ import Disparos from "./pages/Disparos";
 import Plano from "./pages/Plano";
 import Atualizacoes from "./pages/Atualizacoes";
 import Tutoriais from "./pages/Tutoriais";
+import Resgate from "./pages/Resgate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,17 +20,25 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/disparos" element={<Disparos />} />
-            <Route path="/plano" element={<Plano />} />
-            <Route path="/atualizacoes" element={<Atualizacoes />} />
-            <Route path="/tutoriais" element={<Tutoriais />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
+        <Routes>
+          {/* Página de resgate sem layout do dashboard */}
+          <Route path="/resgate" element={<Resgate />} />
+          
+          {/* Páginas com layout do dashboard */}
+          <Route path="/*" element={
+            <Layout>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/disparos" element={<Disparos />} />
+                <Route path="/plano" element={<Plano />} />
+                <Route path="/atualizacoes" element={<Atualizacoes />} />
+                <Route path="/tutoriais" element={<Tutoriais />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Layout>
+          } />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
