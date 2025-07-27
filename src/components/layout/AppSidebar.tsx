@@ -69,7 +69,7 @@ export function AppSidebar() {
 
   return (
     <Sidebar 
-      className="border-r border-glass-border bg-sidebar/80 backdrop-blur-2xl"
+      className="border-r border-glass-border bg-sidebar/80 backdrop-blur-2xl animate-slide-in-left"
       collapsible="icon"
     >
       <SidebarContent className="gap-0">
