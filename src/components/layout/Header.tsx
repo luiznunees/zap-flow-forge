@@ -56,7 +56,7 @@ export function Header() {
   const ConnectionIcon = connectionConfig.icon
 
   return (
-    <header className="sticky top-0 z-50 w-full animate-slide-in-right">
+    <header className="sticky top-0 z-50 w-full">
       <GlassCard variant="blur" className="rounded-none border-b border-glass-border backdrop-blur-2xl bg-background/80">
         <div className="flex h-16 items-center justify-between px-3 sm:px-6">
           <div className="flex items-center gap-4">

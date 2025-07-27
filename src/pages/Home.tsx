@@ -51,6 +51,14 @@ const statsCards = [
     color: "text-success",
     gradient: "from-success/20 to-success/5"
   },
+  {
+    title: "IA Ativada",
+    value: "Seu plano não possui IA",
+    icon: Sparkles,
+    color: "text-warning",
+    gradient: "from-warning/20 to-warning/5",
+    hasUpgrade: true
+  }
 ]
 
 const alerts = [
@@ -124,7 +132,7 @@ export default function Home() {
   }
 
   return (
-    <div className="space-y-6 p-4 sm:p-6 animate-fade-in">
+    <div className="space-y-6 p-4 sm:p-6">
       {/* Welcome Section */}
       <div className="space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -169,11 +177,16 @@ export default function Home() {
       )}
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {statsCards.map((stat, index) => (
           <GlassCard key={index} variant="blur" className="p-4 sm:p-6 space-y-4">
             <div className="flex items-center justify-between">
               <stat.icon className={`h-6 w-6 ${stat.color}`} />
+              {stat.hasUpgrade && (
+                <Button size="sm" variant="outline" className="text-xs h-7">
+                  Upgrade
+                </Button>
+              )}
             </div>
             
             <div className="space-y-2">
@@ -222,6 +235,35 @@ export default function Home() {
             </div>
           </GlassCard>
 
+          {/* Future Experiments */}
+          <GlassCard variant="blur" className="p-4 sm:p-6">
+            <h2 className="text-lg sm:text-xl font-semibold mb-4 flex items-center gap-2">
+              <Sparkles className="h-5 w-5 text-primary" />
+              Experimentos
+            </h2>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between p-3 rounded-xl bg-card/30">
+                <div className="flex items-center gap-3">
+                  <Sparkles className="h-5 w-5 text-primary" />
+                  <div>
+                    <div className="font-medium text-sm">Testar envio com IA</div>
+                    <div className="text-xs text-muted-foreground">Otimize suas mensagens automaticamente</div>
+                  </div>
+                </div>
+                <Badge variant="secondary" className="text-xs">Em Breve</Badge>
+              </div>
+              <div className="flex items-center justify-between p-3 rounded-xl bg-card/30">
+                <div className="flex items-center gap-3">
+                  <Users className="h-5 w-5 text-accent" />
+                  <div>
+                    <div className="font-medium text-sm">Nova segmentação</div>
+                    <div className="text-xs text-muted-foreground">Segmente contatos por comportamento</div>
+                  </div>
+                </div>
+                <Badge variant="secondary" className="text-xs">Beta</Badge>
+              </div>
+            </div>
+          </GlassCard>
         </div>
 
         {/* Activities Timeline */}
@@ -258,6 +300,40 @@ export default function Home() {
         </GlassCard>
       </div>
 
+      {/* Quick Actions */}
+      <GlassCard variant="blur" className="p-4 sm:p-6">
+        <h2 className="text-lg sm:text-xl font-semibold mb-4">Ações Rápidas</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <Button variant="glass" className="h-auto p-4 flex-col gap-2 items-start">
+            <Send className="h-5 w-5 text-primary" />
+            <div className="text-left">
+              <div className="font-medium text-sm">Novo Disparo</div>
+              <div className="text-xs text-muted-foreground">Envie mensagens agora</div>
+            </div>
+          </Button>
+          <Button variant="glass" className="h-auto p-4 flex-col gap-2 items-start">
+            <Calendar className="h-5 w-5 text-accent" />
+            <div className="text-left">
+              <div className="font-medium text-sm">Agendar Envio</div>
+              <div className="text-xs text-muted-foreground">Programe para depois</div>
+            </div>
+          </Button>
+          <Button variant="glass" className="h-auto p-4 flex-col gap-2 items-start">
+            <Users className="h-5 w-5 text-success" />
+            <div className="text-left">
+              <div className="font-medium text-sm">Gerenciar Listas</div>
+              <div className="text-xs text-muted-foreground">Organize seus contatos</div>
+            </div>
+          </Button>
+          <Button variant="glass" className="h-auto p-4 flex-col gap-2 items-start">
+            <BookOpen className="h-5 w-5 text-warning" />
+            <div className="text-left">
+              <div className="font-medium text-sm">Ver Tutoriais</div>
+              <div className="text-xs text-muted-foreground">Aprenda a usar melhor</div>
+            </div>
+          </Button>
+        </div>
+      </GlassCard>
     </div>
   )
 }
