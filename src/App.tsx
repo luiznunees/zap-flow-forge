@@ -10,6 +10,7 @@ import Plano from "./pages/Plano";
 import Atualizacoes from "./pages/Atualizacoes";
 import Tutoriais from "./pages/Tutoriais";
 import Resgate from "./pages/Resgate";
+import Contatos from "./pages/Contatos";
 import Login from "./pages/Login";
 import Termos from "./pages/Termos";
 import Privacidade from "./pages/Privacidade";
@@ -47,6 +48,7 @@ const App = () => (
                 <Route path="/" element={<Home />} />
                 <Route path="/dashboard" element={<Home />} />
                 <Route path="/disparos" element={<Disparos />} />
+                <Route path="/contatos" element={<Contatos />} />
                 <Route path="/plano" element={<Plano />} />
                 <Route path="/atualizacoes" element={<Atualizacoes />} />
                 <Route path="/tutoriais" element={<Tutoriais />} />
