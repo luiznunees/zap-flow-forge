@@ -77,24 +77,28 @@ export default {
 				},
 				neon: {
 					glow: 'hsl(var(--neon-glow))',
-					'glow-blue': 'hsl(var(--neon-glow-blue))'
+					'glow-intense': 'hsl(var(--neon-glow-intense))'
 				}
 			},
 			backgroundImage: {
 				'gradient-glass': 'var(--gradient-glass)',
 				'gradient-neon': 'var(--gradient-neon)',
-				'gradient-card': 'var(--gradient-card)'
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-electric': 'var(--gradient-electric)'
 			},
 			boxShadow: {
 				'glass': 'var(--shadow-glass)',
 				'neon': 'var(--shadow-neon)',
-				'neon-blue': 'var(--shadow-neon-blue)'
+				'neon-intense': 'var(--shadow-neon-intense)',
+				'electric': 'var(--shadow-electric)'
 			},
 			backdropBlur: {
 				'glass': '16px'
 			},
 			transitionTimingFunction: {
-				'glass': 'var(--transition-glass)'
+				'glass': 'var(--transition-glass)',
+				'electric': 'var(--transition-electric)',
+				'fast': 'var(--transition-fast)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

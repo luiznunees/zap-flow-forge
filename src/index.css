@@ -8,100 +8,119 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Glassmorphism Background - Dark cosmic theme */
-    --background: 217 33% 8%;
-    --foreground: 210 40% 95%;
+    /* Dark Mode as Default - Professional Dark Theme */
+    --background: 222 47% 3%;
+    --foreground: 210 40% 98%;
 
-    /* Glass Cards with blur effect */
-    --card: 217 33% 12%;
-    --card-foreground: 210 40% 95%;
+    /* Glass Cards with enhanced blur effect */
+    --card: 222 47% 6% / 0.8;
+    --card-foreground: 210 40% 98%;
 
     /* Popover glass effect */
-    --popover: 217 33% 10%;
-    --popover-foreground: 210 40% 95%;
+    --popover: 222 47% 8% / 0.9;
+    --popover-foreground: 210 40% 98%;
 
-    /* Primary neon green accent */
-    --primary: 142 100% 58%;
-    --primary-foreground: 217 33% 8%;
+    /* Primary Electric Neon Green */
+    --primary: 127 100% 50%;
+    --primary-foreground: 222 47% 3%;
 
     /* Secondary glass panels */
-    --secondary: 217 33% 15%;
-    --secondary-foreground: 210 40% 88%;
+    --secondary: 222 47% 12% / 0.7;
+    --secondary-foreground: 210 40% 92%;
 
     /* Muted glass with subtle opacity */
-    --muted: 217 33% 18%;
-    --muted-foreground: 210 20% 65%;
+    --muted: 222 47% 15% / 0.6;
+    --muted-foreground: 210 20% 70%;
 
-    /* Accent glassmorphism blue */
-    --accent: 199 89% 58%;
-    --accent-foreground: 217 33% 8%;
+    /* Accent electric green variant */
+    --accent: 127 80% 45%;
+    --accent-foreground: 222 47% 3%;
 
-    /* Error states */
-    --destructive: 0 84% 60%;
+    /* Error states with electric red */
+    --destructive: 0 100% 55%;
     --destructive-foreground: 210 40% 98%;
 
-    /* Warning amber */
-    --warning: 43 96% 56%;
-    --warning-foreground: 217 33% 8%;
+    /* Warning electric amber */
+    --warning: 43 100% 50%;
+    --warning-foreground: 222 47% 3%;
 
-    /* Success neon green */
-    --success: 142 100% 58%;
-    --success-foreground: 217 33% 8%;
+    /* Success electric green */
+    --success: 127 100% 50%;
+    --success-foreground: 222 47% 3%;
 
-    /* Glass borders and inputs */
-    --border: 217 33% 20%;
-    --input: 217 33% 15%;
-    --ring: 142 100% 58%;
+    /* Glass borders and inputs with neon accent */
+    --border: 222 47% 18% / 0.5;
+    --input: 222 47% 10% / 0.8;
+    --ring: 127 100% 50%;
 
-    /* Glass effect radius */
-    --radius: 1.5rem;
+    /* Enhanced glass effect radius - more rounded */
+    --radius: 2rem;
 
-    /* Sidebar glassmorphism */
-    --sidebar-background: 217 33% 10%;
-    --sidebar-foreground: 210 40% 90%;
-    --sidebar-primary: 142 100% 58%;
-    --sidebar-primary-foreground: 217 33% 8%;
-    --sidebar-accent: 217 33% 15%;
-    --sidebar-accent-foreground: 210 40% 90%;
-    --sidebar-border: 217 33% 18%;
-    --sidebar-ring: 142 100% 58%;
+    /* Sidebar glassmorphism enhanced */
+    --sidebar-background: 222 47% 5% / 0.9;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 127 100% 50%;
+    --sidebar-primary-foreground: 222 47% 3%;
+    --sidebar-accent: 222 47% 12% / 0.7;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 222 47% 18% / 0.4;
+    --sidebar-ring: 127 100% 50%;
 
-    /* Glass overlay effects */
-    --glass-overlay: 217 33% 12% / 0.7;
-    --glass-border: 210 40% 50% / 0.2;
-    --neon-glow: 142 100% 58% / 0.4;
-    --neon-glow-blue: 199 89% 58% / 0.3;
+    /* Enhanced glass overlay effects */
+    --glass-overlay: 222 47% 8% / 0.8;
+    --glass-border: 127 100% 50% / 0.2;
+    --neon-glow: 127 100% 50% / 0.5;
+    --neon-glow-intense: 127 100% 50% / 0.8;
 
-    /* Gradients for glassmorphism */
-    --gradient-glass: linear-gradient(135deg, hsl(217 33% 15% / 0.9), hsl(217 33% 8% / 0.7));
-    --gradient-neon: linear-gradient(135deg, hsl(142 100% 58%), hsl(199 89% 58%));
-    --gradient-card: linear-gradient(145deg, hsl(217 33% 12% / 0.8), hsl(217 33% 18% / 0.6));
+    /* Enhanced gradients for glassmorphism */
+    --gradient-glass: linear-gradient(135deg, hsl(222 47% 8% / 0.9), hsl(222 47% 4% / 0.7));
+    --gradient-neon: linear-gradient(135deg, hsl(127 100% 50%), hsl(127 80% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(222 47% 6% / 0.8), hsl(222 47% 12% / 0.6));
+    --gradient-electric: linear-gradient(135deg, hsl(127 100% 50% / 0.2), hsl(127 80% 45% / 0.1));
 
-    /* Shadows and glows */
-    --shadow-glass: 0 8px 32px 0 hsl(217 33% 8% / 0.37);
-    --shadow-neon: 0 0 30px hsl(142 100% 58% / 0.3);
-    --shadow-neon-blue: 0 0 30px hsl(199 89% 58% / 0.2);
+    /* Enhanced shadows and glows */
+    --shadow-glass: 0 12px 40px 0 hsl(222 47% 3% / 0.5);
+    --shadow-neon: 0 0 40px hsl(127 100% 50% / 0.4);
+    --shadow-neon-intense: 0 0 60px hsl(127 100% 50% / 0.6);
+    --shadow-electric: 0 4px 20px hsl(127 100% 50% / 0.3);
 
-    /* Animation transitions */
-    --transition-glass: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smooth animation transitions */
+    --transition-glass: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-electric: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .dark {
-    /* Enhanced dark mode for glassmorphism */
-    --background: 217 33% 6%;
-    --foreground: 210 40% 98%;
-    --card: 217 33% 10%;
-    --card-foreground: 210 40% 98%;
-    --popover: 217 33% 8%;
-    --popover-foreground: 210 40% 98%;
-    --secondary: 217 33% 12%;
-    --secondary-foreground: 210 40% 95%;
-    --muted: 217 33% 15%;
-    --muted-foreground: 210 20% 70%;
-    --border: 217 33% 18%;
-    --input: 217 33% 12%;
-    --sidebar-background: 217 33% 8%;
-    --sidebar-accent: 217 33% 12%;
+  .light {
+    /* Light Mode Alternative - Clean Professional Light */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100% / 0.9;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100% / 0.95;
+    --popover-foreground: 222 47% 11%;
+    
+    --secondary: 210 40% 96% / 0.8;
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 210 40% 94% / 0.7;
+    --muted-foreground: 222 47% 40%;
+    
+    --border: 214 32% 91% / 0.6;
+    --input: 214 32% 95% / 0.9;
+    
+    --sidebar-background: 0 0% 98% / 0.9;
+    --sidebar-accent: 210 40% 94% / 0.8;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    
+    /* Light mode glass effects */
+    --glass-overlay: 0 0% 100% / 0.8;
+    --glass-border: 127 100% 50% / 0.15;
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.9), hsl(210 40% 98% / 0.7));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(210 40% 96% / 0.6));
+    --shadow-glass: 0 8px 32px 0 hsl(222 47% 11% / 0.1);
   }
 }
 
@@ -121,5 +140,56 @@ All colors MUST be HSL.
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+  }
+
+  /* Electric Neon Effects */
+  .electric-glow {
+    @apply shadow-neon;
+  }
+
+  .electric-glow-intense {
+    @apply shadow-neon-intense;
+  }
+
+  .electric-border {
+    @apply border border-primary/30 shadow-electric;
+  }
+
+  /* Glass Morphism Effects */
+  .glass-card {
+    @apply bg-gradient-card backdrop-blur-xl border border-glass-border shadow-glass;
+  }
+
+  .glass-panel {
+    @apply bg-gradient-glass backdrop-blur-2xl border border-glass-border;
+  }
+
+  /* Smooth Transitions */
+  .transition-electric {
+    transition: var(--transition-electric);
+  }
+
+  .transition-glass {
+    transition: var(--transition-glass);
+  }
+
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+
+  /* Hover Effects */
+  .hover-electric:hover {
+    @apply shadow-neon-intense border-primary/50 scale-[1.02];
+  }
+
+  .hover-glow:hover {
+    @apply shadow-neon;
+  }
+
+  /* iOS-style Emoji Support */
+  .emoji {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-style: normal;
+    font-weight: normal;
   }
 }
